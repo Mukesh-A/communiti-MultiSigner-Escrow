@@ -64,4 +64,7 @@ contract MultiSignerWallet {
             to.transfer(amount);
         }
     }
+
+    // this is function where we can directly pass the value to the contract, no need to pass any variable
+    function deposite() external payable {}
 }

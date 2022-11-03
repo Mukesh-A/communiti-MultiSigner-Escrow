@@ -25,6 +25,10 @@ async function main() {
   );
 
   await wallet.deployed();
+  const BalanceOfPayee1 = await hre.ethers.provider.getBalance(wallet.address);
+  await wallet.deposite({ value: 2 });
+  const BalanceOfPayee2 = await hre.ethers.provider.getBalance(wallet.address);
+
   const owners = await wallet.getOwners();
   console.log("wallet deployed to", owners);
 
@@ -42,6 +46,7 @@ async function main() {
 
   const transfers2 = await wallet.getTransfers();
   console.log(transfers, transfers2);
+  console.log(BalanceOfPayee1, BalanceOfPayee2);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
