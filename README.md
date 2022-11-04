@@ -1,13 +1,7 @@
-# Sample Hardhat Project
+# Solidity Project
+## MultiSigner
+A wallet which need approval of multiplle people to transfer fund.No one entity can operate this wallet.Number of approver should be defined in the form of threshold.We have various type of require query in different function.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+ApproveTransfer() was a complicated function while writing this smart contract,understood it when deployed the code repetedly.
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
